@@ -1,5 +1,12 @@
 #include <math.h>
 #include <stdio.h>
+int pow(int n,int r)
+{
+    int ans=1;
+    for(int i=0;i<r;i++)
+        ans*=n;
+    return ans;
+}
 int index(int val,int r)
 {
             long square = val * val;
@@ -13,11 +20,12 @@ int index(int val,int r)
             int ans = 0;
             for (int i = 0; i < len / 2 - r / 2; i++)
                 square = square/10;
-            for (int i = 0; i < r; i++)
-            {
-                ans = ans + square % 10 * pow((double)10, (double)i);
-                square /= 10;
-            }
+            // for (int i = 0; i < r; i++)
+            // {
+            //     ans = ans + square % 10 * pow((double)10, (double)i);
+            //     square /= 10;
+            // }
+            ans=square%pow(10,r);
             //ans=square%(int)(pow((double)10,(double)r));
             printf("%d\n", ans);
         return ans;

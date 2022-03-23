@@ -39,8 +39,7 @@ void main()
 				exit(0);
 		}
 	}
-	return;			
-	
+	return;				
 }
 void display(int arr[])
 {

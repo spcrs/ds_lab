@@ -66,7 +66,7 @@ void main()
         head1->next=prev;
         prev=head1;
         head1=temp;
-        struct Node *temp1=prev;
+        // struct Node *temp1=prev;
     }
     head->next=NULL;
     head=prev;

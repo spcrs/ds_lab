@@ -54,11 +54,12 @@ node* delete(node *root,int val)
             return root->left;
         }
         int min=findMin(root->right);
-        node* temp1=root->right;
-        printf("%d",temp1->val);
+        //node* temp1=root->right;
+        //printf("%d",temp1->val);
         root->val=min;
         root->right=delete(root->right,min);
     }
+    
     return root;
     
 }
